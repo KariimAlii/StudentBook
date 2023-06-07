@@ -1,3 +1,5 @@
+using StudentBook.PresentationLayer;
+
 namespace StudentBook
 {
     public class Program
@@ -8,6 +10,13 @@ namespace StudentBook
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            #region Extensions
+            builder.Services.AddApplicationServices();
+            builder.Services.AddRepoServices();
+            builder.Services.AddManagerServices();
+            builder.Services.AddAutoMapperServices(); 
+            #endregion
 
             var app = builder.Build();
 
@@ -28,7 +37,7 @@ namespace StudentBook
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Student}/{action=Index}/{id?}");
 
             app.Run();
         }

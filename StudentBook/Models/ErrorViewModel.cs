@@ -1,4 +1,4 @@
-namespace StudentBook.Models
+﻿namespace StudentBook.PresentationLayer.Models
 {
     public class ErrorViewModel
     {

@@ -1,0 +1,16 @@
+﻿@model StudentReadDto
+@{
+    ViewBag.Title = $"Delete Student {@Model.Name}";
+}
+
+
+<h1>
+    Are you sure you want to delete student : @Model.Name ?
+</h1>
+<form method="post">
+    <input type="submit" value="confirm" class="btn btn-danger" />
+</form>
+
+<br />
+<br />
+<a class="btn btn-primary" asp-action="Index" asp-controller="Student">Back to Student List</a>

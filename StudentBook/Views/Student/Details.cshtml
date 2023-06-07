@@ -1,0 +1,20 @@
+﻿@model StudentReadDto
+@{
+    ViewBag.Title = $"Student {Model.Name} Details";
+}
+
+<h1 class="alert alert-success">
+    Student ID : @Model.Id 
+    <br /> 
+    Student Name: @Model.Name 
+    <br /> 
+    Student Gender : @Model.Gender
+    <br />
+    Student City : @Model.City 
+    <br /> 
+    Is Enrolled : @Model.IsEnrolled
+</h1>
+
+<br />
+<br />
+<a class="btn btn-primary" asp-action="Index" asp-controller="Student">Back to Student List</a>

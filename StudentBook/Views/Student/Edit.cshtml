@@ -1,0 +1,44 @@
+﻿@model StudentUpdateDto
+@{
+    ViewBag.Title = $"Edit Student {Model.Name} Details";
+}
+
+
+<form method="post">
+    <div asp-validation-summary="All"></div>
+
+    <br />
+    <label asp-for="Name">Name:</label>
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span>
+    <br />
+    <br />
+    <label asp-for="Gender">Gender:</label>
+    <input asp-for="Gender" />
+    <span asp-validation-for="Gender"></span>
+    <br />
+    <br />
+    <label asp-for="City">City:</label>
+    <input asp-for="City" />
+    <span asp-validation-for="City"></span>
+    <br />
+    <br />
+    <label asp-for="DateOfBirth">Birthday:</label>
+    <input asp-for="DateOfBirth" type="date">
+    <span asp-validation-for="DateOfBirth"></span>
+    <br />
+    <br />
+    <label asp-for="IsEnrolled">Is Enrolled ?</label>
+    <input type="checkbox" asp-for="IsEnrolled" value="true">
+    <span asp-validation-for="IsEnrolled"></span>
+    <br />
+    <br />
+    <input type="submit" value="Update" class="btn btn-success" />
+</form>
+<br />
+<br />
+<a class="btn btn-primary" asp-action="Index" asp-controller="Student">Back to Student List</a>
+
+@section scripts {
+    <partial name="_ValidationScriptsPartial"></partial>
+}
